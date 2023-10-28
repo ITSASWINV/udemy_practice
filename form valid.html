@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var password = document.getElementById("password").value;
+            var gender = document.getElementById("gender").value;
+            var terms = document.getElementById("terms").checked;
+            var address = document.getElementById("address").value;
+
+            if (name === "") {
+                alert("Please enter your name.");
+                return false;
+            }
+
+            // Password validation
+            if (!validatePassword(password)) {
+                alert("Please enter a valid password. It should have at least 8 characters with a capital letter, a number, and a special character.");
+                return false;
+            }
+
+            if (gender === "") {
+                alert("Please select your gender.");
+                return false;
+            }
+
+            if (!terms) {
+                alert("Please accept the terms and conditions.");
+                return false;
+            }
+
+            if (address === "") {
+                alert("Please enter your address.");
+                return false;
+            }
+
+            return true;
+        }
+
+        function validatePassword(password) {
+            // Password should be at least 8 characters with a capital letter, a number, and a special character.
+            var passwordPattern = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{8,}$/;
+            return passwordPattern.test(password);
+        }
+
+        function resetForm() {
+            document.getElementById("name").value = "";
+            document.getElementById("password").value = "";
+            document.getElementById("gender").value = "";
+            document.getElementById("terms").checked = false;
+            document.getElementById("address").value = "";
+            document.getElementById("teen").checked = false;
+            document.getElementById("adult").checked = false;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Form Validation</h1>
+    <form onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select><br><br>
+
+        <label for="address">Address</label><br>
+        <textarea name="address" id="address" cols="30" rows="10"></textarea><br>
+
+        <label for="terms">Accept Terms and Conditions:</label>
+        <input type="checkbox" id="terms" name="terms"><br><br>
+
+        <label for="age">Age:</label><br>
+        <label for="teen">Teen</label>
+        <input type="radio" name="age" id="teen"><br>
+        <label for="adult">Adult</label>
+        <input type="radio" name="age" id="adult"><br><br>
+
+        <input type="submit" value="Submit">
+        <input type="button" value="Reset" onclick="resetForm()">
+    </form>
+</body>
+
+</html>
