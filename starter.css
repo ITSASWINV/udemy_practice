@@ -2,3 +2,23 @@ section a {
     color: green;
 }
 footer a{color: aqua;}
+
+
+h1{
+    color: red;
+}
+section h2{
+    color: blue;
+}
+footer a{
+    color: chocolate;
+}
+input + button {
+    background-color: pink !important;
+}
+h2 + button {
+    background-color: violet !important;
+}
+footer > a {
+    background-color: greenyellow !important;
+}
