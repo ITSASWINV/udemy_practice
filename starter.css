@@ -16,9 +16,35 @@ footer a{
 input + button {
     background-color: pink !important;
 }
-h2 + button {
+/* h2 + button {
     background-color: violet !important;
-}
+} */
 footer > a {
     background-color: greenyellow !important;
+}
+input[type=password] {
+    color: red;
+}
+a[href*="#home"]{
+    color:rgb(20, 247, 76) !important;
+}
+/* button:hover {
+    background-color: rgb(140, 109, 115);
+    color: yellow;
+} */
+a:hover{
+    text-decoration: overline ;
+}
+
+/* .non button :active{
+    background-color: rgb(224, 15, 182);
+} */
+.pos:nth-of-type(2n){
+background-color: violet !important;
+}
+h2::first-letter{
+    font-size: 60px;
+}
+p::selection{
+    background-color: rgb(14, 97, 69);
 }
