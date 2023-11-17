@@ -1,13 +1,48 @@
-h2 {
-    color: rgb(26, 22, 22);
-    font-style: italic;
+body{
+    margin: 50px;
 }
 
-h3 {
-    color: rgb(39, 34, 28);
+div{
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
 }
-button {color: red;
-background-color: green;}
-p{
-    color: orange;
+h1{
+    background-color: red;
+     width: 100px;
+    padding-left: 100px;
+    padding-top: 100px;
+    padding-right: 100px;
+    padding-bottom: 100px; 
+    margin-bottom: -10px;
+    
+}
+#one{
+    background-color:#968842;
+    border-width: 5px;
+    border-color: black;
+    border-style: dashed dashed dashed dashed;
+    box-sizing: border-box;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+#two{
+    background-color: #178219;
+    border-color: #eb9694;
+    border-style: dashed;
+    border-left-color:black ;
+}
+#three{
+    background-color:#eb9694 ;
+    border: 4px solid black;
+    border-radius: 50%;
+    border-radius: 10px 100px / 120px;
+}
+button{
+    padding: 5px 100px 500px 20px;
+  
+}
+span{
+    margin-left: 10px;
+    background-color: #178219;
 }
