@@ -1,0 +1,30 @@
+section{
+    background-color: rgb(160, 45, 45);
+    width: 150px;
+    height: 150px;
+}
+div{
+    background-color: olivedrab;
+    width: 25%;
+    height: 25%;
+}
+h1{
+font-size: 100px;
+border: 2px solid black;
+line-height: 200% ;
+}
+h2{
+    font-size: 1em;
+    margin-left: 2em ;
+}
+p{
+    font-size: 1em;
+}
+article{
+    font-size: 70px;
+}
+button{
+    font-size: 1.5em;
+    background-color: bisque;
+}
+ul{font-size: 1.5em;}
